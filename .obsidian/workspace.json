@@ -1,0 +1,249 @@
+{
+  "main": {
+    "id": "5324373015726ba8",
+    "type": "split",
+    "children": [
+      {
+        "id": "050b03310ac0695e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "748bf9c5d45ce3ea",
+            "type": "leaf",
+            "state": {
+              "type": "beautitab-react-view",
+              "state": {},
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d909007197aacb66",
+    "type": "split",
+    "children": [
+      {
+        "id": "9cef35ba51326496",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b4fb7009797dd14",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "218c0761ad7f2815",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "68120f4d48632857",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "7d8aadaa6875f7fd",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          },
+          {
+            "id": "12e66ed7ae305584",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "bcfdeec2810eb841",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1a87c78af9e1c81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd2a979d829f0f55",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "b87cc63d6c6860e8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "87bcd58d1c3aeb68",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "638b05acf653d431",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "quiet-outline"
+            }
+          },
+          {
+            "id": "0c5846cc4b29923e",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 278.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false,
+      "obsidian-read-it-later:ReadItLater: Create from clipboard": false,
+      "templater-obsidian:Templater": false,
+      "i18n:I18N": false,
+      "homepage:打开主页": false,
+      "obsidian42-brat:BRAT": false
+    }
+  },
+  "active": "748bf9c5d45ce3ea",
+  "lastOpenFiles": [
+    "资讯文献/文献清单.md",
+    "柴桑笔记/四、国内外研究现状和发展动态.docx",
+    "柴桑笔记/四、国内外研究现状和发展动态.md",
+    "喻家文书/项目申报模板.md",
+    "资讯文献/大数据赋能公共空间品质提升：以龙泉市中心城区为例.md",
+    "资讯文献/大数据赋能公共空间品质提升：以龙泉市中心城区为例.pdf",
+    "资讯文献/基于人工智能和遥感技术的城市更新单元识别方法研究及应用.md",
+    "资讯文献/基于人工智能和遥感技术的城市更新单元识别方法研究及应用.pdf",
+    "资讯文献/基于开放数据的城市更新潜力地区识别方法研究.md",
+    "资讯文献/基于开放数据的城市更新潜力地区识别方法研究.pdf",
+    "资讯文献/空间基因理论下城市更新潜力空间智能识别方法——以上海为例.md",
+    "资讯文献/空间基因理论下城市更新潜力空间智能识别方法——以上海为例.pdf",
+    "资讯文献/城市空间重构：人工智能背景下的规划机遇.md",
+    "资讯文献/城市空间重构：人工智能背景下的规划机遇.pdf",
+    "AI 指令/整理成适配Obsidian的Markdown源码.md",
+    "资讯文献/Measuring streetscape perceptions from driveways and sidewalks to inform pedestrian-oriented street renewal in Düsseldorf.pdf",
+    "Measuring streetscape perceptions from driveways and sidewalks to inform pedestrian-oriented street renewal in Düsseldorf.pdf",
+    "资讯文献/Using deep learning to unravel the structural evolution of block-scale green spaces in urban renewal.pdf",
+    "资讯文献/Using deep learning to unravel the structural evolution of block-scale green spaces in urban renewal.pdf.crdownload",
+    "资讯文献/大数据赋能公共空间品质提升 - 以龙泉市中心城区为例.md",
+    "资讯文献/基于人工智能和遥感技术的城市更新单元识别方法研究及应用 2.md",
+    "资讯文献/基于人工智能和遥感技术的城市更新单元识别方法研究及应用 1.md",
+    "资讯文献/0108.png",
+    "资讯文献/0107.png",
+    "资讯文献/0106.png",
+    "资讯文献/0105.png",
+    "资讯文献/0104.png",
+    "资讯文献/0103.png",
+    "资讯文献/0102.png",
+    "资讯文献/0101.png",
+    "项目申报模板.md",
+    "喻家文书/五、研究路线及解决的主要问题.md",
+    "喻家文书/任务书-何青松.md",
+    "喻家文书/技术路线.png",
+    "喻家文书/多智能体协作决策支持系统.png",
+    "AI 指令/真题文件整理成Markdown源码.md",
+    "五、研究路线及解决的主要问题.md",
+    "任务书-何青松.md",
+    "“‘面’面俱到，‘试’出真章”行政秘书面试模拟对比实录.md",
+    "大纲构思.md",
+    "管理文秘概述.md",
+    "会议管理.md",
+    "示例代码.md",
+    "AI 指令/阅读留痕.md",
+    "AI 指令/讲解习题.md",
+    "未命名.canvas",
+    "the Attic/示例看板.canvas",
+    "the Attic/同步方式.canvas",
+    "obsidian-tasks-main/obsidian-tasks-main/resources/sample_vaults/Tasks-Demo/Manual Testing/Frontmatter/Frontmatter code.canvas",
+    "the Attic/示例白板.canvas"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "id": "editing-toolbar",
+    "name": "Editing Toolbar",
+    "version": "2.4.16",
+    "minAppVersion": "0.14.0",
+    "description": "黑曜石编辑工具栏是从cmenu修改而来的，cmenu提供了更强大的自定义设置，并具有许多内置的编辑命令，可以提供类似MS Word的工具栏编辑体验。",
+    "author": "Cuman",
+    "authorUrl": "https://github.com/cumany/obsidian-editing-toolbar",
+    "fundingUrl": "https://github.com/cumany#thank-you-very-much-for-your-support",
+    "isDesktopOnly": false
+}

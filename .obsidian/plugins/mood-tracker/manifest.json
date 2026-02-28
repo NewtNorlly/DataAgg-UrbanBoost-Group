@@ -1,0 +1,11 @@
+{
+    "id": "mood-tracker",
+    "name": "Mood Tracker",
+    "version": "1.3.4",
+    "minAppVersion": "1.0.0",
+    "description": "轻松跟踪你的心情和情绪。可视化跟踪历史并浏览历史情绪。",
+    "author": "dartungar",
+    "authorUrl": "https://dartungar.com",
+    "fundingUrl": "https://www.paypal.com/paypalme/dartungar",
+    "isDesktopOnly": false
+}

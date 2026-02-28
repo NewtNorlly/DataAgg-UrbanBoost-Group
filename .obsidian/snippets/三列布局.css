@@ -1,0 +1,23 @@
+/* 新建文件：simple-layout.css */
+.markdown-rendered table.dataview {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  justify-content: flex-start !important;
+}
+
+/* 隐藏表头 */
+.markdown-rendered table.dataview thead {
+  display: none;
+}
+
+.markdown-rendered table.dataview tr {
+  width: calc(33.33% - 20px) !important; /* 每行三个，减去间距 */
+  display: inline-block !important; 
+  box-sizing: border-box; /* 盒模型，避免宽度受 padding、border 影响 */
+}
+
+.markdown-rendered table.dataview tr img {
+  width: 100% !important; /* 让图片充满容器，可根据需要调整 */
+  height: auto !important; /* 保持宽高比 */
+}

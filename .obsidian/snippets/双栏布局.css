@@ -1,0 +1,11 @@
+.markdown-preview-section.two-columns {
+  column-count: 2;
+  column-gap: 2rem; /* 列间距，可调整 */
+  column-rule: 1px dashed var(--background-modifier-border); /* 可选：列分割线 */
+}
+/* 确保标题、图片等不跨列 */
+.two-columns h1, .two-columns h2, .two-columns img, .two-columns table {
+  break-inside: avoid-column;
+}
+
+

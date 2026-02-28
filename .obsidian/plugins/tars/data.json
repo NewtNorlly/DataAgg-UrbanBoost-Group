@@ -1,0 +1,30 @@
+{
+  "providers": [
+    {
+      "tag": "智谱",
+      "vendor": "Zhipu",
+      "options": {
+        "apiKey": "bc0321c41d6440e4b966e2ec0e80a9b5.OLm8COWKewnEJIDJ",
+        "baseURL": "https://open.bigmodel.cn/api/paas/v4/",
+        "model": "glm-4-plus",
+        "tokenExpireInMinutes": 1440,
+        "enableWebSearch": false,
+        "parameters": {},
+        "token": {
+          "id": "eyJhbGciOiJIUzI1NiIsInNpZ25fdHlwZSI6IlNJR04ifQ.eyJhcGlfa2V5IjoiYmMwMzIxYzQxZDY0NDBlNGI5NjZlMmVjMGU4MGE5YjUiLCJleHAiOjE3NDAxMjYxODU2NzgsInRpbWVzdGFtcCI6MTc0MDAzOTc4NTY3OH0.RwI_UZrGPdQ-VUUUL8F7TFnZ_eyJ9BxlVZqlXZiiJ0U",
+          "exp": 1740126185678,
+          "apiKeySecret": "bc0321c41d6440e4b966e2ec0e80a9b5.OLm8COWKewnEJIDJ"
+        }
+      }
+    }
+  ],
+  "systemTags": [
+    "系统"
+  ],
+  "newChatTags": [
+    "新对话"
+  ],
+  "userTags": [
+    "我"
+  ]
+}

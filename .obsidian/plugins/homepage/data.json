@@ -1,0 +1,23 @@
+{
+  "version": 4,
+  "homepages": {
+    "Main Homepage": {
+      "value": "微信读书Gallery",
+      "kind": "文件",
+      "openOnStartup": true,
+      "openMode": "替换所有打开的笔记",
+      "manualOpenMode": "保持打开的笔记",
+      "view": "编辑视图（实时预览）",
+      "revertView": true,
+      "openWhenEmpty": false,
+      "refreshDataview": false,
+      "autoCreate": false,
+      "autoScroll": false,
+      "pin": false,
+      "commands": [],
+      "alwaysApply": false,
+      "hideReleaseNotes": false
+    }
+  },
+  "separateMobile": false
+}

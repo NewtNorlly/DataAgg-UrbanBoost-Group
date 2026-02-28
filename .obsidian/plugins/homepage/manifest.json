@@ -1,0 +1,13 @@
+{
+    "id": "homepage",
+    "name": "Homepage",
+    "version": "4.2.2",
+    "minAppVersion": "1.4.10",
+    "description": "在启动时打开指定的笔记、画布或工作区，或设置以便后续快速访问。",
+    "author": "novov",
+    "authorUrl": "https://novov.me",
+    "isDesktopOnly": false,
+    "fundingUrl": {
+        "Ko-fi": "https://ko-fi.com/novov"
+    }
+}

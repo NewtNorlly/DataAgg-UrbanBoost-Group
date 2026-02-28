@@ -1,0 +1,10 @@
+{
+    "id": "make-md",
+    "name": "make.md",
+    "version": "1.0.8",
+    "minAppVersion": "0.16.0",
+    "description": "Make.md为黑曜石带来了强大而现代的笔记功能。无需任何代码，即可更灵活地捕获、组织和连接信息",
+    "author": "make.md",
+    "authorUrl": "https://www.make.md",
+    "isDesktopOnly": false
+}
