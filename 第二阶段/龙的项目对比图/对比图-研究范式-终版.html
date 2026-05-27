@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>研究范式对比图</title>
+<style>
+  /* === Reset & Base === */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: '楷体', 'KaiTi', 'STKaiti', 'Kai', serif;
+    background: #EDF2F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* === Slide Container: 16:9 widescreen === */
+  .slide {
+    width: 1600px;
+    height: 900px;
+    background: linear-gradient(135deg, #F7F9FA 0%, #F0F4F8 50%, #EDF2F7 100%);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
+    padding: 40px 52px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* === Decorative Background === */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(100, 140, 180, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .slide::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(160, 170, 190, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  /* (deco dots removed to meet min-24px rule) */
+
+  /* === Title Area === */
+  .title-area {
+    text-align: center;
+    margin-bottom: 26px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .title-area h1 {
+    font-size: 48px; /* 标题字体放大：32px→48px */
+    font-weight: normal;
+    color: #2D3748;
+    letter-spacing: 12px; /* 字间距同步加大，增强视觉效果 */
+    margin-bottom: 6px;
+  }
+  .title-area .sub {
+    font-size: 24px;
+    color: #A0AEC0;
+    letter-spacing: 4px;
+  }
+  .title-line {
+    width: 72px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #A0B4C8, transparent);
+    margin: 10px auto 0;
+  }
+
+  /* === Column Headers === */
+  .comp-header {
+    display: flex;
+    gap: 24px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  .comp-header .col {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 10px;
+    font-size: 32px;
+    letter-spacing: 4px;
+    position: relative;
+  }
+  .col-left {
+    background: #D0D7E1; /* 左侧冷灰色系 */
+    color: #2D3748;
+  }
+  .col-right {
+    background: #B8875A; /* 右侧改为暖棕色调（核心修改） */
+    color: #FFFFFF; /* 文字改为白色，增强对比 */
+    font-weight: bold;
+  }
+  .vs-badge {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #CBD5E0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #4A5568;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+  }
+
+  /* === Content Grid: 4 rows === */
+  .content-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    z-index: 1;
+    min-height: 0;
+  }
+
+  /* === Row === */
+  .row {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  /* === Cell === */
+  .cell {
+    flex: 1;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .cell-left {
+    background: #F5F7FA; /* 左侧冷灰浅色调 */
+    border: 1px solid #E2E8F0;
+  }
+  .cell-right {
+    background: #FAF0E6; /* 右侧暖色调浅背景（呼应标题栏） */
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  /* === Row Category Tag === */
+  .row-tag {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    font-size: 24px;
+    padding: 0 12px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .row-tag-left {
+    background: #F5F7FA;
+    color: #2D3748;
+  }
+  .row-tag-right {
+    background: #FAF0E6; /* 右侧标签背景同步暖色调 */
+    color: #2D3748;
+  }
+
+  /* === Cell Content: all font >= 24px === */
+  .cell-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .keyword {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .keyword-left { color: #2B6CB0; /* 左侧冷蓝色关键词 */ }
+  .keyword-right { color: #B8875A; /* 右侧暖棕色关键词 */ }
+  .badge {
+    font-size: 24px;
+    padding: 0 12px;
+    border-radius: 4px;
+    line-height: 1.5;
+  }
+  .badge-left {
+    background: #D0D7E1;
+    color: #2D3748;
+  }
+  .badge-right {
+    background: #E6D4B9; /* 右侧徽章同步暖色调 */
+    color: #2D3748;
+    border: none;
+  }
+
+  .cell-desc {
+    font-size: 24px;
+    color: #4A5568;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+  .cell-desc .highlight {
+    color: #B8875A;
+    font-weight: bold;
+  }
+  .cell-desc .muted {
+    color: #2B6CB0;
+  }
+
+  /* === Row Divider === */
+  .row-gap {
+    width: 96%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #CBD5E0, transparent);
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  /* === Emoji in tags === */
+  .emoji-tag {
+    margin-right: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide">
+
+  <!-- (deco removed) -->
+
+  <!-- Title -->
+  <div class="title-area">
+    <h1>🌿 研究范式对比</h1>
+    <div class="sub">TRADITIONAL  ·  VS  ·  INNOVATION</div>
+    <div class="title-line"></div>
+  </div>
+
+  <!-- Column Headers -->
+  <div class="comp-header">
+    <div class="col col-left">传统研究范式</div>
+    <div class="col col-right">本项目创新范式</div>
+    <div class="vs-badge">vs</div>
+  </div>
+
+  <!-- Content: 4 Rows -->
+  <div class="content-grid">
+
+    <!-- ===== Row 1: 评估维度 ===== -->
+    <div class="row">
+      <div class="cell cell-left">
+        <div class="row-tag row-tag-left"><span class="emoji-tag">📊</span>01 评估维度</div>
+        <div class="cell-title">
+          <span class="keyword keyword-left">静态割裂</span>
+        </div>
+        <div class="cell-desc">
+          单一物质指标（容积率、年代），<span class="muted">物质与社会感知脱节</span>，静态单点评估。
+        </div>
+      </div>
+      <div class="cell cell-right">
+        <div class="row-tag row-tag-right"><span class="emoji-tag">📊</span>01 评估维度</div>
+        <div class="cell-title">
+          <span class="keyword keyword-right">动态耦合</span>
+          <span class="badge badge-right">首创</span>
+        </div>
+        <div class="cell-desc">
+          “6+1”多维体系，以“时间沉积”统一物质与社会感知，<span class="highlight">内外耦合、动态评估</span>。
+        </div>
+      </div>
+    </div>
+
+    <div class="row-gap"></div>
+
+    <!-- ===== Row 2: 识别方式 ===== -->
+    <div class="row">
+      <div class="cell cell-left">
+        <div class="row-tag row-tag-left"><span class="emoji-tag">🔍</span>02 识别方式</div>
+        <div class="cell-title">
+          <span class="keyword keyword-left">只分不溯</span>
+        </div>
+        <div class="cell-desc">
+          仅聚类分型，无法解释成因；模型黑箱化，<span class="muted">可解释性弱</span>，难精准施策。
+        </div>
+      </div>
+      <div class="cell cell-right">
+        <div class="row-tag row-tag-right"><span class="emoji-tag">🔍</span>02 识别方式</div>
+        <div class="cell-title">
+          <span class="keyword keyword-right">分类 + 溯源</span>
+        </div>
+        <div class="cell-desc">
+          K-means 聚类 + 可解释机器学习（SHAP），从“分型”到<span class="highlight">“成因溯源”</span>，精准诊断制约机制。
+        </div>
+      </div>
+    </div>
+
+    <div class="row-gap"></div>
+
+    <!-- ===== Row 3: 决策模式 ===== -->
+    <div class="row">
+      <div class="cell cell-left">
+        <div class="row-tag row-tag-left"><span class="emoji-tag">🎯</span>03 决策模式</div>
+        <div class="cell-title">
+          <span class="keyword keyword-left">经验主导</span>
+        </div>
+        <div class="cell-desc">
+          依赖专家判断，多主体博弈抽象化，<span class="muted">结果难落位</span>到具体空间单元。
+        </div>
+      </div>
+      <div class="cell cell-right">
+        <div class="row-tag row-tag-right"><span class="emoji-tag">🎯</span>03 决策模式</div>
+        <div class="cell-title">
+          <span class="keyword keyword-right">数据驱动</span>
+        </div>
+        <div class="cell-desc">
+          诊断驱动多智能体博弈，多主体协同、<span class="highlight">空间精准落位</span>，差异化策略自动生成。
+        </div>
+      </div>
+    </div>
+
+    <div class="row-gap"></div>
+
+    <!-- ===== Row 4: 技术链条 ===== -->
+    <div class="row">
+      <div class="cell cell-left">
+        <div class="row-tag row-tag-left"><span class="emoji-tag">⚙️</span>04 技术链条</div>
+        <div class="cell-title">
+          <span class="keyword keyword-left">碎片化</span>
+        </div>
+        <div class="cell-desc">
+          识别、诊断、决策独立；数据融合度低，<span class="muted">AI 应用浅</span>、自动化弱。
+        </div>
+      </div>
+      <div class="cell cell-right">
+        <div class="row-tag row-tag-right"><span class="emoji-tag">⚙️</span>04 技术链条</div>
+        <div class="cell-title">
+          <span class="keyword keyword-right">全链路一体化</span>
+        </div>
+        <div class="cell-desc">
+          “识别—诊断—决策”闭环，AI 深度赋能，产出<span class="highlight">可落地的智能决策支持系统</span>。
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
